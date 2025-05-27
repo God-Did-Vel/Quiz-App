@@ -1,0 +1,146 @@
+/* ---------- Global reset & classic font ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color:rgb(46, 46, 221);
+  color:rgb(29, 1, 1);
+  line-height: 1.5;
+}
+
+/* ---------- Layout wrapper ---------- */
+.app {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Titles & sections ---------- */
+.title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* ---------- Progress bar ---------- */
+.progress {
+  height: 8px;
+  background: #e6e6e6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress .bar {
+  height: 100%;
+  background: #2c7bff;
+  transition: width 0.4s ease;
+}
+
+/* ---------- Question box ---------- */
+.quiz-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question {
+  font-size: 1.2rem;
+}
+
+/* ---------- Options ---------- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #cfcfcf;
+  border-radius: 8px;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background-color: #ededed;
+}
+
+/* Feedback colors */
+.option.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.option.wrong {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+/* ---------- Score section ---------- */
+.score-section {
+  text-align: center;
+}
+
+.score-section button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  background-color: #2c7bff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.score-section button:hover {
+  background-color: #155dff;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e6e6e6; /* optional */
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 480px) {
+  .app {
+    margin: 20px;
+    padding: 16px;
+  }
+
+  .question {
+    font-size: 1.05rem;
+  }
+
+  .option {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+
+}
